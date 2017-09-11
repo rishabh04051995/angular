@@ -1,0 +1,23 @@
+<!-- <ul>
+	<li *ngFor ="let weather of temp.forecast.forecastday">
+		{{weather}}
+	</li>
+</ul> -->
+
+ <div class="container">
+ <div class="row">    
+<div class="col-md-4 text-center mb-5" *ngFor="let city of temp.forecast.forecastday">
+<div class="card" >
+  <img class="card-img-top" src="{{city.day.condition.icon}}" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">Date: {{city.date}}</h4>
+    <p class="card-text">Max. Temp.: {{city.day.maxtemp_c}}&deg;C</p>
+    <p class="card-text">Min. Temp.: {{city.day.mintemp_c}}&deg;C</p>
+    <p class="card-text">{{city.day.condition.text}}</p>
+<button  class="btn btn-outline-success my-2 my-sm-0" type="button"(click)="saveData(city)">Add to Favourites</button>
+    </div>
+</div> 
+</div>
+</div>
+</div> 
+

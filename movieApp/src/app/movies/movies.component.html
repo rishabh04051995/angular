@@ -1,0 +1,4 @@
+<a [routerLink]="'/fav-movies'"> Favourite Movies</a>
+
+<app-movie-search (movieList)="updateMovieList($event)"></app-movie-search>
+<app-movie-list [movieList]="movieList"></app-movie-list>
