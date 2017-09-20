@@ -10,7 +10,7 @@ export class SearchComponent implements OnInit {
 	@Output() receive = new EventEmitter<string>();
   public temp : any;
   constructor(private weather : WeatherService) { }
-  
+  a:boolean=false;
   
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
    console.log(this.temp)
    this.receive.emit(this.temp)
    })
-
+this.a=!true;
 
 }
 }

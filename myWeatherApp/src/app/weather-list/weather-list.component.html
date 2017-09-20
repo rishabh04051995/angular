@@ -4,20 +4,42 @@
 	</li>
 </ul> -->
 
- <div class="container">
+ <!-- <div class="container">
  <div class="row">    
-<div class="col-md-4 text-center mb-5" *ngFor="let city of temp.forecast.forecastday">
-<div class="card" >
+ <div class="col-md-4 text-center mb-5" *ngFor="let city of temp.forecast.forecastday">
+ <div class="card" >
   <img class="card-img-top" src="{{city.day.condition.icon}}" alt="Card image cap">
   <div class="card-body">
     <h4 class="card-title">Date: {{city.date}}</h4>
     <p class="card-text">Max. Temp.: {{city.day.maxtemp_c}}&deg;C</p>
     <p class="card-text">Min. Temp.: {{city.day.mintemp_c}}&deg;C</p>
     <p class="card-text">{{city.day.condition.text}}</p>
-<button  class="btn btn-outline-success my-2 my-sm-0" type="button"(click)="saveData(city)">Add to Favourites</button>
+ <button  class="btn btn-outline-success my-2 my-sm-0" type="button"(click)="save(temp,data)">Add to Favourites</button>
     </div>
-</div> 
-</div>
-</div>
-</div> 
+ </div> 
+ </div>
+ </div>
+ </div>  -->
 
+<div class="container list">
+  <h1 class="display-3 text-center">{{temp.location.name}}</h1>
+  <p class="lead text-center">{{temp.location.country}}</p>
+  <div class="row">
+    <div class="col-md-4 text-center mb-5" *ngFor="let data of temp.forecast.forecastday">
+      <div class="card testimonial-card">
+        <div class="card-up indigo lighten-1">
+        </div>
+        <div class="avatar"><img src="{{data.day.condition.icon}}" class="rounded-circle">
+        </div>
+        <div class="card-body">
+        <h4 class="card-title">Date: {{data.date}}</h4>
+          <p class="card-text">Max. Temp : {{data.day.maxtemp_c}}&deg;C</p>
+          <p class="card-text">Min. Temp : {{data.day.mintemp_c}}&deg;C</p>
+          <p class="card-text">Condition : {{data.day.condition.text}}</p>
+          <!-- <button (click)="save(data)">add</button> -->
+          <button  class="btn btn-outline-success my-2 my-sm-0" type="button"(click)="save(data)">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

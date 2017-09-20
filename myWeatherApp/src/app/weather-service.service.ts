@@ -9,5 +9,23 @@ export class WeatherService {
   getCity(city:String){
   	return this.http.get(this.Url+city+ '&days=6').map((res:Response)=>res.json());
   }
+  Expressapi ="http://localhost:3000/api/insert"
+  postCity(data:String){
+  return this.http.post(this.Expressapi,data).map((res:Response)=>res.json());
 
+  }
+ showFavList(){
+ 	var expressApi='http://localhost:3000/api/find'
+    return this.http.get(expressApi)
+    .map((res:Response)=>{
+        return res.json()})
+
+ }
+ deleteData(id:any){
+    var expressApi='http://localhost:3000/api/delete/'+id;
+    return this.http.delete(expressApi)
+    .map((res:Response)=>{
+        res.json()
+    })
+}
 }

@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "dependencies": {
+   "express": "*",
+   "body-parser": "*",
+   "mongoose": "*",
+   "cors": "*"
+ },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+   "coveralls": "^2.13.1",
+   "mocha": "^3.5.0",
+   "nyc": "^11.1.0",
+   "supertest": "^3.0.0"  
+  }
+}
