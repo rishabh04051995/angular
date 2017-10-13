@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms'
 import {WeatherService} from './weather-service.service'
 import {HttpModule} from '@angular/http';
 import {RouterModule, Routes } from '@angular/router';
+import { BsDatepickerModule, ModalModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -30,7 +31,8 @@ const approutes:Routes=[
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(approutes)
+    RouterModule.forRoot(approutes),
+    ModalModule.forRoot()
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

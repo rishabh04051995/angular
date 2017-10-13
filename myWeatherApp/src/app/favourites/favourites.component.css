@@ -1,4 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+.b1{
+  float: left;
+}
+.b2{
+  float: right;
+}
+.b3{
+  float: left;
+}
 figure.snip0078 {
   font-family: 'Raleway', Arial, sans-serif;
   color: #fff;

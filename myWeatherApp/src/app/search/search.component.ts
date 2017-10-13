@@ -8,19 +8,21 @@ import {WeatherService} from '../weather-service.service';
 })
 export class SearchComponent implements OnInit {
 	@Output() receive = new EventEmitter<string>();
-  public temp : any;
+  public tempo : any;
+  city:any;
   constructor(private weather : WeatherService) { }
   a:boolean=false;
   
 
   ngOnInit() {
+    this. searchCity(this.city)
   }
 
    searchCity(city){
    this.weather.getCity(city).subscribe((res)=>{
-   this.temp = res
-   console.log(this.temp)
-   this.receive.emit(this.temp)
+   this.tempo = res
+   console.log(this.tempo)
+   this.receive.emit(this.tempo)
    })
 this.a=!true;
 

@@ -19,8 +19,13 @@
       <a class="nav-link disabled" href="#">Disabled</a>
     </li>
   </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" [(ngModel)] = "city" name="city" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0"   (click) = "searchCity(city)" [routerLink]="['/search']">Search</button>
+  </form>
   </div>
 </nav> 
+
 
 <!-- 
   <div class="row">
@@ -47,8 +52,15 @@
           <p>MinTemp: {{data.mintemp}}</p>
           <p>MaxTemp: {{data.maxtemp}}</p>
           
-          <button class="btn btn-danger ml-2" (click)="delete(data)">Delete</button>
+          <button class="btn btn-danger ml-2 b1" (click)="delete(data)">Delete</button>
+           <button class="btn btn-danger ml-2 b2" (click)="update(data)">Edit</button>
   </figcaption>
 </figure>
+ <div *ngIf="up==true && data._id==id">
+  EditDate:   <input type="text" name="Date" [(ngModel)]="date"><br><br>
+  MinTemp: <input type="text" name="MinTemp" [(ngModel)]="min"><br><br>
+  MaxTemp: <input type="text" name="MaxTemp" [(ngModel)]="max"><br><br>
+  <button class="btn btn-danger ml-2 b3" (click)="submit(data)">submit</button>
+           </div>
 </div>
 </div>

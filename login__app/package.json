@@ -1,0 +1,29 @@
+{
+  "name": "login__app",
+  "version": "1.0.0",
+  "description": "simple authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rishabh",
+  "license": "ISC",
+  "dependencies": {
+  	"bcryptjs":"*",
+    "body-parser": "*",
+    "connect-flash": "*",
+     "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-handlebars": "*",
+    "express-messages":"*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb":"*",
+    "mongoose": "*",
+    "mongoose-user": "0.0.1",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "^1.0.0"
+  }
+}
+

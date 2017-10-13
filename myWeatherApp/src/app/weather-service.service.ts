@@ -28,4 +28,13 @@ export class WeatherService {
         res.json()
     })
 }
+
+editData(id:any, data:any){
+
+  var expressApi='http://localhost:3000/api/update/'+id;
+  return this.http.put(expressApi,data)
+  .map((res:Response)=>{
+    res.json()
+  })
+}
 }

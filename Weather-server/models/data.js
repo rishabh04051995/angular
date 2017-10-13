@@ -2,7 +2,9 @@ let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let weatherSchema = new Schema({
-	city : String,
+	city :{
+		type:String
+	},   //{type:String,unique:true}
 	country : String,
 	date : String,
 	maxtemp : String,
